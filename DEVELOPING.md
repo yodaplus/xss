@@ -1,10 +1,18 @@
-# Multi Collateral Dai Developer Guide
+# Multi Collateral USXD Developer Guide
 
 *work in progress*
 
-This is a more in depth description of the Dai core contracts. The
-previous iteration of Dai was called Single Collateral Dai (SCD), or
-`sai`, and is found at https://github.com/makerdao/sai
+This is a more in depth description of the USXD core contracts. 
+
+As this is based on MakerDAO's Multi collateral Dai, the documentation
+for Dai holds true for most part. 
+
+From a developer's point of view, apart from changes to the  `name` and 
+`symbol` attributes of the Token, the USDX contract is referred to as `Dai` 
+throughtout. So, for the rest of this documentation `Dai` should be read 
+as `USXD` unless mentioned otherwise.
+
+Specifically, the unit `Dai` would correspond to 1 USXD.
 
 
 ## Tooling
@@ -35,7 +43,7 @@ Generally, `wad` should be used additively and `ray` should be used
 multiplicatively. It usually doesn't make sense to multiply a `wad` by a
 `wad` (or a `rad` by a `rad`).
 
-Two multiplaction operators are used in `dss`:
+Two multiplaction operators are used in `xss`:
 
 - `mul`: standard integer multiplcation. No loss of precision.
 - `rmul`: used for multiplications involving `ray`'s. Precision is lost.
